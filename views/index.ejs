@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Welcome to Mongoose Dashboard</h1>
+    <p>This site may not contain just mongeese</p>
+    <% for (var a of allAnimals){ %>
+        <a href="/animals/<%= a._id %>"> <%= a.name %> </a>
+        <p>Age is <%= a.age %></p>
+        <p>Color: <%=a.color %></p>
+    <% } %>
+    <a href="/animals/new">Add a new animal!</a>
+</body>
+
+</html>
